@@ -1,0 +1,47 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 5rem;
+    padding-top: 10px;
+    border-top: 1.5px solid #eff2f5;
+    position:absolute;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.footer__left{
+    display: flex;
+    align-items: center;
+    /* padding-top: 10px; */
+}
+
+.footer__slogan {
+    /* font-family: Lato-Regular; */
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.footer__slogan__left {
+    color: #7b7d8a;
+    /* font-family: Lato-Light; */
+}
+
+.footer__slogan__right {
+    color: #ff000f;
+    padding-left: 4px;
+}
+
+.footer__options{
+    display: flex;
+}
+
+.footer__options>h3{
+    padding-left: 20px;
+    /* font-family: Lato-Light; */
+    font-size: 17px;
+    cursor: pointer;
+}
