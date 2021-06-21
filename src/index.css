@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: local('Poppins-Bold'), url(./fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: local('Poppins-Regular'), url(./fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: local('Lato-Regular'), url(./fonts/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: local('Lato-Light'), url(./fonts/Lato-Light.ttf) format('truetype');
 }
