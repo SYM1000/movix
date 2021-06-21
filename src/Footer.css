@@ -17,6 +17,10 @@
     /* padding-top: 10px; */
 }
 
+.footer__left>h1{
+    font-family: Poppins-Bold;
+}
+
 .footer__slogan {
     /* font-family: Lato-Regular; */
     font-size: 15px;
