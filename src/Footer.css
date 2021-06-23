@@ -5,10 +5,10 @@
     margin: 2rem 5rem;
     padding-top: 10px;
     border-top: 1.5px solid #eff2f5;
-    position:absolute;
+    /* position:absolute;
     left:0;
     bottom:0;
-    right:0;
+    right:0; */
 }
 
 .footer__left{
