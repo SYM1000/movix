@@ -27,3 +27,9 @@
 .searchRow:hover{
     background-color: lightgray;
 }
+
+.iconHeart{
+    color: red;
+    margin-right: 10px;
+    cursor: pointer;
+}
