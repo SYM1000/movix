@@ -36,7 +36,7 @@ function Header() {
 
                 {filteredData.length !== 0 && (
                     <div className="dataResult">
-                        {filteredData.slice(0,15).map((value, key) => {
+                        {filteredData.slice(0,10).map((value, key) => {
                             // return <div className="dataItem"> {value.title} </div>
                             return <SearchRow title={value.title} />
                         })}
