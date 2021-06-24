@@ -1,0 +1,24 @@
+.home__section{
+    width: 100% -5rem;
+    margin: 2rem 5rem;
+    margin-right: 5rem;
+    margin-bottom: 50px;
+}
+
+.title__section {
+    /* font-family: Poppins-Regular; */
+    /* padding-bottom: 10px; */
+}
+
+.movies__section {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    overflow-x: scroll;
+    padding-top: 20px;
+}
+
+.movies__section::-webkit-scrollbar{
+    display: none;
+}
