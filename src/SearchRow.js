@@ -4,36 +4,36 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 
-// function isMovieLiked(movie_title){
-//     var user_liked_movies = localStorage.getObj('liked_movies')
-//     if ( user_liked_movies == null) {
-//         return false
-//     }
+function SearchRow({title, update_function}) {
+    const [ liked, setLiked ] = useState( isMovieLiked({title}) );
 
-//     return (user_liked_movies.includes(movie_title));
-    
-// }
+    function isMovieLiked(movie_title){
+        var liked_movies = localStorage.getObj('liked_movies')
 
-function SearchRow({title}) {
-    // const [liked, setLiked] = useState(isMovieLiked({title}))
+        if ( liked_movies === null ){
+            return false;
+        }
+
+        for(var i = 0; i < liked_movies.length; i++) {
+            if (liked_movies[i].title === movie_title.title) {
+                // console.log("la pelicula " + movie_title.title + " esta likeada")
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     const handleClick = () => {
         storeMovieToLocal(title)
-        // setLiked(prevLiked => true)
+        update_function()
       }
 
     return (
         <div className='searchRow'>
             <h1>{title}</h1>
-            
-            {/* {liked ? (
-                <FavoriteIcon className="iconHeart" onClick={handleClick}/>
-            ) : (
-                <FavoriteBorderIcon className="icon" onClick={handleClick}/>
-            )
-            } */}
 
-            <FavoriteBorderIcon className="icon" onClick={handleClick}/>
+            { isMovieLiked({title}) ?  <FavoriteIcon className="iconHeart" onClick={handleClick}/> : <FavoriteBorderIcon className="icon" onClick={handleClick}/> }
             
         </div>
     )
@@ -49,22 +49,31 @@ function storeMovieToLocal(movie_title){
         // console.log("Hay " + old_liked_movies.length + " peliculas likeadas")
     }
 
-    if (liked_movies.includes(movie_title)){ // Delete movie if exixsts
-        const delete_at = liked_movies.indexOf(movie_title);
-        if (delete_at > -1) {
-            liked_movies.splice(delete_at, 1);
+    // Delete movie if exixsts
+    for(var i = 0; i < liked_movies.length; i++) {
+        if (liked_movies[i].title === movie_title) {
+            liked_movies.splice(i,1);
+            localStorage.setObj('liked_movies', liked_movies);
+            console.log("Eliminando: " + movie_title)
+            return;
         }
-
-        localStorage.setObj('liked_movies', liked_movies);
-        console.log("Eliminando: " + movie_title)
-        return;
     }
 
-    liked_movies.push(movie_title)
+    const new_movie = {
+        title: movie_title
+    };
+    
+    liked_movies.push(new_movie)
+    
     localStorage.setObj('liked_movies', liked_movies);
 
     // localStorage.setObj('liked_movies', []); // For cleaning liked user's movies
-    console.log("Peliculas likeadas: " + liked_movies)
+    console.log("Peliculas likeadas: " + liked_movies.length)
+
+    // console.log("El arreglo es:")
+    // liked_movies.map((value, key) => {
+    //     console.log(value.title)
+    // })
 }
 
 export default SearchRow
