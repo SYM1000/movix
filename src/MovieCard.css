@@ -1,0 +1,27 @@
+.movie__card{
+    margin-right: 15px;
+    max-width: 154px;
+}
+
+.movie__poster>img{
+    position: relative;
+    height: 240px;
+    min-width: 154px;
+    max-width: 154px;
+    border-radius: 14px;
+    overflow: hidden;
+    
+    transition: transform .2s; /* Animation */
+}
+
+.movie__poster>img:hover{
+    z-index: 1;
+    /* box-shadow: 5px 2px 14px rgba(0,0,0,0.4); */
+    box-shadow: 6px 8px 18px -9px rgba(0,0,0,0.75);
+    transform: scale(1.05);
+}
+
+.movie__title{
+    margin-left: 10px;
+    margin-right: 5px;
+}

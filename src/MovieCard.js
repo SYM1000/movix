@@ -1,0 +1,49 @@
+import React, {useState} from 'react'
+import './MovieCard.css'
+import { project_keys } from './keys'
+
+function MovieCard({movie_title}) {
+
+    const keys = project_keys()
+    const api_request = "https://api.themoviedb.org/3/search/movie?api_key="+keys.TMDB_key+"&language=en-US&query="+movie_title+"&page=1&include_adult=true"
+
+    const [posterURL, setPosterURL] = useState("");
+    
+
+    // Defining async function
+    async function getapi(url) {
+        
+        // Storing response
+        const response = await fetch(url);
+        
+        // Storing data in form of JSON
+        var data = await response.json();
+        
+        if (response) {
+            // hideloader();
+            // console.log("El url del poster es: " + data.results[0].poster_path);
+            setPosterURL(data.results[0].poster_path)
+        }
+        
+    }
+
+    getapi(api_request)
+
+    return (
+        <div className="movie__card">
+
+            <div className="movie__poster">
+                <img 
+                    src={"https://image.tmdb.org/t/p/w200"+posterURL}
+                    alt={movie_title}></img>
+            </div>
+
+            <div className="movie__title">
+                <h3>{movie_title}</h3>
+            </div>
+            
+        </div>
+    )
+}
+
+export default MovieCard
