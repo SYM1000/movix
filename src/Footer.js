@@ -23,6 +23,7 @@ function Footer() {
                     <h3>About</h3>
                     <h3>Contact</h3>
                     <h3>Privacy</h3>
+                    <h3>Feedback</h3>
                 </div>
 
             </div>
