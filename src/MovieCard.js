@@ -21,8 +21,14 @@ function MovieCard({movie_title}) {
         
         if (response) {
             // hideloader();
-            // console.log("El url del poster es: " + data.results[0].poster_path);
+            for(var i = 0; i < data.results.length; i++){
+                if(data.results[i].original_title === movie_title){
+                    setPosterURL(data.results[i].poster_path)
+                    return;
+                }
+            }
             setPosterURL(data.results[0].poster_path)
+            
         }
         
     }
