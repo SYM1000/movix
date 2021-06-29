@@ -16,7 +16,7 @@ function HomeSection({section_title, section_data}) {
                             return <MovieCard movie_title={value.title}/>
                         })
                     ) : (
-                        <h5>Add a movie</h5>
+                        <h2>movix is ready</h2>
                     )
                 }
             </div>

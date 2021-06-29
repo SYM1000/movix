@@ -22,3 +22,9 @@
 .movies__section::-webkit-scrollbar{
     display: none;
 }
+
+.movies__section>h2{
+    font-family: Poppins-Bold;
+    color: lightgray;
+    margin-left: 10px;
+}
