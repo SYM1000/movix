@@ -19,9 +19,9 @@
     padding-top: 20px;
 }
 
-.movies__section::-webkit-scrollbar{
+/* .movies__section::-webkit-scrollbar{
     display: none;
-}
+} */
 
 .movies__section>h2{
     font-family: Poppins-Bold;
