@@ -21,6 +21,10 @@ function MovieCard({movie_title}) {
         
         if (response) {
             // hideloader();
+            if (data.results === undefined){
+                return;
+            }
+
             for(var i = 0; i < data.results.length; i++){
                 if(data.results[i].original_title === movie_title){
                     setPosterURL(data.results[i].poster_path)
