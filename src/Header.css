@@ -3,7 +3,7 @@
     margin: 0 auto;
     padding: 15px 5rem;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     position: sticky;
     background-color: white;
@@ -24,9 +24,9 @@
 }
 
 .header__center {
-    /* display: flex; */
-    /* flex-direction: column; */
-    max-height: 10px;
+    align-items: center;
+    max-height: 30px;
+    margin-left: 5rem;
 }
 
 .header__searchbar{

@@ -44,7 +44,7 @@ function Header({update_function, update_recommendations}) {
                 )}
             </div>
 
-            <div className="header__right">
+            {/* <div className="header__right">
                 <div className="header__option">
                     <h2>Home</h2>
                 </div>
@@ -57,7 +57,7 @@ function Header({update_function, update_recommendations}) {
                 <div className="header__option">
                     <h2>Favorites</h2>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )
