@@ -41,6 +41,10 @@
     color: black;
 }
 
+.header__searchbar>input{
+    width: 252px;
+}
+
 .dataResult{
     margin-top: 15px;
     width: 300px;
