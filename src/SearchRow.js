@@ -2,10 +2,14 @@ import React, { useState } from 'react'
 import './SearchRow.css'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { project_keys } from './keys'
 
 
-function SearchRow({title, update_function}) {
+function SearchRow({title, update_function, update_recommendations}) {
     const [ liked, setLiked ] = useState( isMovieLiked({title}) );
+    const keys = project_keys()
+    const rec_url = keys.recommendations_url+"/recommendation?movies="
+    const test_url = "http://192.168.0.10:8080/recommendation?movies="
 
     function isMovieLiked(movie_title){
         var liked_movies = localStorage.getObj('liked_movies')
@@ -16,7 +20,6 @@ function SearchRow({title, update_function}) {
 
         for(var i = 0; i < liked_movies.length; i++) {
             if (liked_movies[i].title === movie_title.title) {
-                // console.log("la pelicula " + movie_title.title + " esta likeada")
                 return true;
             }
         }
@@ -24,9 +27,60 @@ function SearchRow({title, update_function}) {
         return false;
     }
 
+    // Defining async function
+  async function getRecommendations(url) {
+      if(url === rec_url){
+        localStorage.setObj('recommendations', []);
+        update_recommendations()
+        return;
+      }
+        
+    const response = await fetch(url);
+
+    var data = await response.json();
+    
+    if (response) {
+        // hideloader();
+        var recommendations = []
+
+        for (const key in data) {
+            const new_movie = {
+                title: key
+            };
+            recommendations.push(new_movie)
+        }
+
+      localStorage.setObj('recommendations', recommendations);
+      update_recommendations()
+
+    }
+    
+  }
+
+  function convertLikedMoviesToString(){
+    const liked_movies = localStorage.getObj('liked_movies');
+    var movies_string = "";
+
+    if ( liked_movies === null || liked_movies.length === 0) {
+      return movies_string;
+    }
+
+    for(var i = 0; i < liked_movies.length; i++) {
+      movies_string += liked_movies[i].title;
+      if (i !== liked_movies.length-1){
+        movies_string+= ","
+      }
+    }
+
+    return movies_string;
+
+  }
+
     const handleClick = () => {
         storeMovieToLocal(title)
+        getRecommendations(rec_url+convertLikedMoviesToString())
         update_function()
+
       }
 
     return (

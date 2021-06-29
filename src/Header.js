@@ -4,7 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import MoviesData from './movies_dataset.json'
 import SearchRow from './SearchRow';
 
-function Header({update_function}) {
+function Header({update_function, update_recommendations}) {
 
     const [filteredData, setFilteredData] = useState([]);
 
@@ -38,7 +38,7 @@ function Header({update_function}) {
                     <div className="dataResult">
                         {filteredData.slice(0,10).map((value, key) => {
                             // return <div className="dataItem"> {value.title} </div>
-                            return <SearchRow title={value.title} update_function={update_function} />
+                            return <SearchRow title={value.title} update_function={update_function} update_recommendations={update_recommendations} />
                         })}
                     </div>
                 )}
