@@ -16,35 +16,35 @@ function Contact() {
             <h2>Links</h2>
             
             <div className="contact__row">
-                <a target='_blank' href={'https://github.com/SYM1000'} className='link'>
+                <a target='_blank' rel="noreferrer" href={'https://github.com/SYM1000'} className='link'>
                 <AiFillGithub className="contact__icon github"/>
                 <p>Github</p>
                 </a>
             </div>
             
             <div className="contact__row">
-                <a target='_blank' href={'https://www.linkedin.com/in/santiago-yeomans/'} className='link'>
+                <a target='_blank' rel="noreferrer" href={'https://www.linkedin.com/in/santiago-yeomans/'} className='link'>
                 <AiOutlineLinkedin className="contact__icon linkedin"/>
                 <p>LinkedIn</p>
                 </a>
             </div>
             
             <div className="contact__row">
-                <a target='_blank' href={'https://twitter.com/SYM1001'} className='link'>
+                <a target='_blank' rel="noreferrer" href={'https://twitter.com/SYM1001'} className='link'>
                 <SiTwitter className="contact__icon twitter"/>
                 <p>Twitter</p>
                 </a>
             </div>
             
             <div className="contact__row">
-                <a target='_blank' href={'https://apps.apple.com/us/developer/santiago-yeomans/id1519365510'} className='link'>
+                <a target='_blank' rel="noreferrer" href={'https://apps.apple.com/us/developer/santiago-yeomans/id1519365510'} className='link'>
                 <SiAppstore className="contact__icon appstore"/>
                 <p>AppStore</p>
                 </a>
             </div>
             
             <div className="contact__row">
-                <a target='_blank' href={'http://www.santiagoyeomans.com/'} className='link'>
+                <a target='_blank' rel="noreferrer" href={'http://www.santiagoyeomans.com/'} className='link'>
                 <CgWebsite className="contact__icon portfolio"/>
                 <p>Portfolio</p>
                 </a>
