@@ -43,9 +43,14 @@
     display: flex;
 }
 
-.footer__options>h3{
+.footer__options h3{
     padding-left: 20px;
+    color: black;
     /* font-family: Lato-Light; */
     font-size: 17px;
-    cursor: pointer;
+    /* cursor: pointer; */
+}
+
+.link {
+    text-decoration: none;
 }

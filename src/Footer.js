@@ -1,5 +1,9 @@
 import React from 'react'
 import "./Footer.css"
+import About from './About';
+import Contact from './Contact';
+import Privacy from './Privacy';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -20,10 +24,18 @@ function Footer() {
 
             <div className="footer__right">
                 <div className="footer__options">
-                    <h3>About</h3>
-                    <h3>Contact</h3>
-                    <h3>Privacy</h3>
-                    <h3>Feedback</h3>
+                    <Link className="link" to="/about">
+                        <h3>About</h3>
+                    </Link>
+                    <Link className="link" to="/contact">
+                        <h3>Contact</h3>
+                    </Link>
+                    <Link className="link" to="/privacy">
+                        <h3>Privacy</h3>
+                    </Link>
+                    {/* <Link className="link" to="">
+                        <h3>Feedback</h3>
+                    </Link> */}
                 </div>
 
             </div>
