@@ -97,3 +97,8 @@
     padding: 0 30px;
     border-bottom: none;
 }
+
+.link{
+    text-decoration: none;
+    color: white;
+}

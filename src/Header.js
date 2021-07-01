@@ -3,6 +3,7 @@ import "./Header.css"
 import SearchIcon from '@material-ui/icons/Search';
 import MoviesData from './movies_dataset.json'
 import SearchRow from './SearchRow';
+import { Link } from 'react-router-dom';
 
 function Header({update_function, update_recommendations}) {
 
@@ -25,7 +26,9 @@ function Header({update_function, update_recommendations}) {
     return (
         <div className="header">
             <div className="header__left">
-                <h1>movix</h1>
+                <Link className="link" to="/">
+                    <h1>movix</h1>
+                </Link>
             </div>
 
             <div className="header__center">
