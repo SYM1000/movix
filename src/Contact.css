@@ -1,0 +1,18 @@
+.contact {
+    margin: 2rem 5rem;
+    margin-top: 5rem;
+}
+
+h1 {
+    font-family: Poppins-Bold;
+}
+
+h2 {
+    font-family: Poppins-Regular;
+    margin-top: 2rem;
+}
+
+p {
+    margin-top: 5px;
+    line-height: 25px;
+}
