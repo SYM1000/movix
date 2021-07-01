@@ -21,7 +21,7 @@ function MovieCard({movie_title}) {
         
         if (response) {
             // hideloader();
-            if (data.results === undefined){
+            if (data.results === undefined || data.results[0] === undefined ){
                 return;
             }
 
