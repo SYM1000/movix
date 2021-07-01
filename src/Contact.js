@@ -1,5 +1,10 @@
 import React from 'react'
 import './Contact.css'
+import {AiFillGithub} from 'react-icons/ai';
+import {AiOutlineLinkedin} from 'react-icons/ai';
+import {SiTwitter} from 'react-icons/si';
+import {SiAppstore} from 'react-icons/si';
+import {CgWebsite} from 'react-icons/cg';
 
 function Contact() {
     return (
@@ -9,11 +14,43 @@ function Contact() {
             <p>Feel free to contact me anytime regarding website feedback, feature requests or just to chat!</p>
             
             <h2>Links</h2>
-            <p>Github: github.com/SYM1000</p>
-            <p>LinkedIn: linkedin.com/in/santiago-yeomans</p>
-            <p>Twitter: twitter.com/SYM1001</p>
-            <p>AppStore: apps.apple.com/us/developer/santiago-yeomans/id1519365510</p>
-            <p>Portfolio: www.santiagoyeomans.com</p>
+            
+            <div className="contact__row">
+                <a target='_blank' href={'https://github.com/SYM1000'} className='link'>
+                <AiFillGithub className="contact__icon github"/>
+                <p>Github</p>
+                </a>
+            </div>
+            
+            <div className="contact__row">
+                <a target='_blank' href={'https://www.linkedin.com/in/santiago-yeomans/'} className='link'>
+                <AiOutlineLinkedin className="contact__icon linkedin"/>
+                <p>LinkedIn</p>
+                </a>
+            </div>
+            
+            <div className="contact__row">
+                <a target='_blank' href={'https://twitter.com/SYM1001'} className='link'>
+                <SiTwitter className="contact__icon twitter"/>
+                <p>Twitter</p>
+                </a>
+            </div>
+            
+            <div className="contact__row">
+                <a target='_blank' href={'https://apps.apple.com/us/developer/santiago-yeomans/id1519365510'} className='link'>
+                <SiAppstore className="contact__icon appstore"/>
+                <p>AppStore</p>
+                </a>
+            </div>
+            
+            <div className="contact__row">
+                <a target='_blank' href={'http://www.santiagoyeomans.com/'} className='link'>
+                <CgWebsite className="contact__icon portfolio"/>
+                <p>Portfolio</p>
+                </a>
+            </div>
+            
+
         </div>
     )
 }

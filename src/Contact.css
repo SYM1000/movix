@@ -15,4 +15,50 @@ h2 {
 p {
     margin-top: 5px;
     line-height: 25px;
+    color: black;
+}
+
+.contact__row{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-size: 18px;
+    transition: transform .2s; /* Animation */
+    width: min-content;
+    cursor: pointer;
+}
+
+.contact__row:hover{
+    z-index: 1;
+    transform: scale(1.1);
+}
+
+.contact__icon{
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.github{
+    color: black;
+}
+
+.linkedin{
+    color: #0E76A8
+}
+
+.twitter{
+    color: #00ACEE;
+}
+
+.portfolio{
+    color: #CC45F2;
+}
+
+.appstore{
+    color: rgb(25, 135, 232);
+}
+
+.link{
+    text-decoration: none;
+    display: flex;
 }
