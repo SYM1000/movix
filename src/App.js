@@ -12,6 +12,7 @@ import Privacy from './Privacy';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
+  require('dotenv').config()
 
   const [ likedMovies, setLikedMovies ] = useState(localStorage.getObj('liked_movies') );
   const [ recommendations, setRecommendations ] = useState( localStorage.getObj('recommendations') );
