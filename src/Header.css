@@ -48,6 +48,7 @@
 .dataResult{
     margin-top: 15px;
     width: 300px;
+    /* width: 100%; */
     height: 200px;
     background-color: white;
     box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
@@ -101,4 +102,54 @@
 .link{
     text-decoration: none;
     color: white;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+    .header {
+        padding: 15px 1rem;
+    }
+    
+    .header__center {
+        margin-left: 2rem;
+    }
+    
+    .header__searchbar>input{
+        /* width: 152px; */
+        width: 100%;
+    }
+    
+    .dataResult{
+        padding-top: 5px;
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .header {
+        padding: 15px 2rem;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 15px 3rem;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .about {
+        margin: 1rem 4rem;
+        margin-top: 4rem;
+    }
+
+}
+
+@media only screen and (min-width: 1201px) {
+    .about {
+        margin: 1rem 5rem;
+        margin-top: 5rem;
+    }
 }

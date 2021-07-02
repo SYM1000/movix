@@ -62,3 +62,64 @@ p {
     text-decoration: none;
     display: flex;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+    .contact {
+        margin: 1rem 1rem;
+        margin-top: 1rem;
+    }
+    
+    p {
+        margin-top: 5px;
+        line-height: 25px;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .contact {
+        margin: 1rem 2rem;
+        margin-top: 2rem;
+    }
+    
+    p {
+        margin-top: 5px;
+        line-height: 25px;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .contact {
+        margin: 1rem 3rem;
+        margin-top: 3rem;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .contact {
+        margin: 1rem 4rem;
+        margin-top: 4rem;
+    }
+    
+    p {
+        margin-top: 5px;
+        line-height: 25px;
+        color: black;
+    }
+
+}
+
+@media only screen and (min-width: 1201px) {
+    .contact {
+        margin: 1rem 4rem;
+        margin-top: 4rem;
+    }
+    
+    p {
+        margin-top: 5px;
+        line-height: 25px;
+        color: black;
+    }
+}

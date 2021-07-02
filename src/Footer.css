@@ -44,7 +44,7 @@
 }
 
 .footer__options h3{
-    padding-left: 20px;
+    margin-left: 20px;
     color: black;
     /* font-family: Lato-Light; */
     font-size: 17px;
@@ -53,4 +53,85 @@
 
 .link {
     text-decoration: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+    .footer {
+        flex-direction: column;
+        margin: 1rem 1rem;
+    }
+    
+    .footer__left{
+        flex-direction: column;
+    }
+    
+    .footer__options{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__options h3{
+        margin-left: 0px;
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .footer {
+        flex-direction: row;
+        margin: 1rem 2rem;
+    }
+    
+    .footer__left{
+        flex-direction: row;
+    }
+    
+    .footer__options{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer__options h3{
+        margin-left: 0px;
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        flex-direction: row;
+        margin: 1rem 3rem;
+    }
+    
+    .footer__left{
+        flex-direction: row;
+    }
+    
+    .footer__options{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer__options h3{
+        margin-left: 0px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .footer {
+        flex-direction: row;
+        margin: 1rem 4rem;
+    }
+
+}
+
+@media only screen and (min-width: 1201px) {
+    .footer {
+        flex-direction: row;
+        margin: 1rem 5rem;
+    }
+
 }

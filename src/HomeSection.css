@@ -28,3 +28,90 @@
     color: lightgray;
     margin-left: 10px;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+    .home__section{
+        width: 100% 1rem;
+        margin: 1rem 1rem;
+        margin-right: 1rem;
+        margin-bottom: 50px;
+    }
+
+    .movies__section {
+        padding-top: 20px;
+    }
+
+    .movies__section>h2{
+        font-family: Poppins-Bold;
+        color: lightgray;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .home__section{
+        width: 100% 2rem;
+        margin: 1rem 2rem;
+        margin-right: 2rem;
+        margin-bottom: 50px;
+    }
+
+    .movies__section {
+        padding-top: 20px;
+    }
+
+    .movies__section>h2{
+        font-family: Poppins-Bold;
+        color: red;
+        margin-left: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .home__section{
+        width: 100% 3rem;
+        margin: 1rem 3rem;
+        margin-right: 3rem;
+        margin-bottom: 50px;
+    }
+
+    .movies__section {
+        padding-top: 20px;
+    }
+
+    .movies__section>h2{
+        font-family: Poppins-Bold;
+        color: red;
+        margin-left: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .home__section{
+        width: 100% 4rem;
+        margin: 1rem 4rem;
+        margin-right: 4rem;
+        margin-bottom: 50px;
+    }
+
+    .movies__section {
+        padding-top: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1201px) {
+    .home__section{
+        width: 100% 5rem;
+        margin: 1rem 5rem;
+        margin-right: 5rem;
+        margin-bottom: 50px;
+    }
+
+    .movies__section {
+        padding-top: 20px;
+    }
+
+}
