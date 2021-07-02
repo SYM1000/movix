@@ -29,7 +29,7 @@ function App() {
       <Hero />
       <HomeSection section_title="Your Liked Movies" section_data={likedMovies}/>
       <HomeSection section_title="Your Recommendations" section_data={ recommendations }/>
-      {/* <HomeSection section_title="More Likeable Movies" section_data={LikeableMovies}/> */}
+      <HomeSection section_title="More Likeable Movies" section_data={LikeableMovies}/>
       <HomeSection section_title="Our Favorite Movies" section_data={OurFavoriteMovies}/>
     </div>);
   }
