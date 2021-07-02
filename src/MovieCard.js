@@ -1,11 +1,9 @@
 import React, {useState} from 'react'
 import './MovieCard.css'
-import { project_keys } from './keys'
 
 function MovieCard({movie_title}) {
 
-    const keys = project_keys()
-    const api_request = "https://api.themoviedb.org/3/search/movie?api_key="+keys.TMDB_key+"&language=en-US&query="+movie_title+"&page=1&include_adult=true"
+    const api_request = "https://api.themoviedb.org/3/search/movie?api_key="+process.env.REACT_APP_TMDB_KEY+"&language=en-US&query="+movie_title+"&page=1&include_adult=true"
 
     const [posterURL, setPosterURL] = useState("");
     

@@ -2,13 +2,11 @@ import React, { useState } from 'react'
 import './SearchRow.css'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import { project_keys } from './keys'
 
 
 function SearchRow({title, update_function, update_recommendations}) {
     const [ liked, setLiked ] = useState( isMovieLiked({title}) );
-    const keys = project_keys()
-    const rec_url = keys.recommendations_url+"/recommendation?movies="
+    const rec_url = process.env.REACT_APP_RECOMMENDATIONS_URL+"/recommendation?movies="
     const test_url = "http://192.168.0.10:8080/recommendation?movies="
 
     function isMovieLiked(movie_title){
