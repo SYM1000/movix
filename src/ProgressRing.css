@@ -1,0 +1,28 @@
+.progressRing{
+    display: inline-block;
+    /* background-image: url('https://mk0soundguyshosprmrt.kinstacdn.com/wp-content/themes/aa/images/rating_bg_lines.png'); */
+    /* background-image: url('https://image.freepik.com/free-photo/natural-abstract-background-green-color_7182-795.jpg'); */
+    /* background-color: rgb(9, 26, 31); */
+    background-color: rgb(28, 181, 97);
+    border-radius: 100%;
+    height: 80px;
+    text-align: center;
+    padding: 1px;
+}
+
+.grupo{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.progressRing>h5{
+    font-size: 110%;
+    z-index: 200;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: -64%;
+}
