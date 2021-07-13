@@ -40,17 +40,17 @@ function MovieCard({movie_title, percentage}) {
 
     return (
         <div className="movie__card">
-
             <div className="movie__poster">
                 <img 
                     src={"https://image.tmdb.org/t/p/w200"+posterURL}
                     alt={movie_title}></img>
             </div>
-            { percentage ?  <ProgressRing percentageValue={percentage} /> : <p></p> }
-            {/* <ProgressRing percentageValue="35"/> */}
 
             <div className="movie__title">
                 <h3>{movie_title}</h3>
+                <div className='movie__ring'>
+                { percentage ?  <ProgressRing percentageValue={percentage}/> : <p></p> }
+                </div>
             </div>
             
         </div>

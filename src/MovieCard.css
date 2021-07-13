@@ -24,4 +24,12 @@
 .movie__title{
     margin-left: 10px;
     margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie__ring{
+    z-index: 2;
+    /* margin-left: -10px; */
+    /* margin-top: -26px; */
 }
