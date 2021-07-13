@@ -13,7 +13,7 @@ function HomeSection({section_title, section_data}) {
                     section_data !== null ? (
                         section_data.slice(0,50).map((value, key) =>{
                             // return <div className="movie__card"> {value.title} </div>
-                            return <MovieCard movie_title={value.title}/>
+                            return <MovieCard movie_title={value.title} percentage={value.percentage}/>
                         })
                     ) : (
                         <h2>movix is ready</h2>

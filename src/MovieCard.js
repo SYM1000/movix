@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import './MovieCard.css'
+import ProgressRing from './ProgressRing';
 
-function MovieCard({movie_title}) {
+function MovieCard({movie_title, percentage}) {
 
     const api_request = "https://api.themoviedb.org/3/search/movie?api_key="+process.env.REACT_APP_TMDB_KEY+"&language=en-US&query="+movie_title+"&page=1&include_adult=true"
 
@@ -45,6 +46,8 @@ function MovieCard({movie_title}) {
                     src={"https://image.tmdb.org/t/p/w200"+posterURL}
                     alt={movie_title}></img>
             </div>
+            { percentage ?  <ProgressRing percentageValue={percentage} /> : <p></p> }
+            {/* <ProgressRing percentageValue="35"/> */}
 
             <div className="movie__title">
                 <h3>{movie_title}</h3>

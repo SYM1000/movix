@@ -43,7 +43,8 @@ function SearchRow({title, update_function, update_recommendations}) {
 
         for (const key in data) {
             const new_movie = {
-                title: key
+                title: key,
+                percentage: data[key]
             };
             recommendations.push(new_movie)
         }
