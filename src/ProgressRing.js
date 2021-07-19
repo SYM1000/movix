@@ -1,21 +1,21 @@
 import React from 'react'
 import './ProgressRing.css'
 
-function ProgressRing() {
-    const percentage = 70;
-    const radius = 40;
+function ProgressRing({percentageValue}) {
+    // const percentage = {percentageValue};
+    const radius = 25;
     const strokeWidth = 10;
     const duration = 500;
-    // const color = 'rgb(27, 180, 95)';
-    const color = 'rgb(162, 225, 186)';
+    const color = 'rgb(27, 180, 95)';
+    // const color = 'rgb(162, 225, 186)';
     const delay = 0;
     const textColor = '';
     const max = 100;
     const halfCircle = radius + strokeWidth;
     const circleCircumference = 2 * Math.PI * radius;
 
-    const macPerc = 100 * percentage / max;
-    const strokeDashoffset = circleCircumference - (circleCircumference * macPerc) / 100;
+    const maxPerc = 100 * {percentageValue}.percentageValue / max;
+    var strokeDashoffset = circleCircumference - (circleCircumference * maxPerc) / 100;
 
     return (
         <div className='progressRing'>
@@ -25,7 +25,7 @@ function ProgressRing() {
                 height={radius*2}
                 viewBox={`0 0 ${halfCircle * 2} ${halfCircle * 2}`}
             >
-            <g transform="rotate(-90 50 50)" origin={`${halfCircle}, ${halfCircle}`}>
+            <g  transform="rotate(-90 35 35)" origin={`${halfCircle}, ${halfCircle}`}> 
                 <circle
                     cx='50%'
                     cy='50%'
@@ -33,7 +33,7 @@ function ProgressRing() {
                     strokeWidth={strokeWidth}
                     r={radius}
                     fill='transparent'
-                    strokeOpacity={0.2}
+                    strokeOpacity={0.3}
                 />
                 <circle
                     cx='50%'
@@ -51,7 +51,7 @@ function ProgressRing() {
             </svg>
             </div>
             
-            <h5>{percentage}%</h5> 
+            <h5>{percentageValue}</h5> 
             
         </div>
     )
