@@ -1,5 +1,6 @@
 # movix
 Get movie recommendations based on your favorite movies
+This is a content based recommendation system for movies
 
 ## Movis is live:
 movix.cc
