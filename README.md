@@ -5,5 +5,7 @@ This is a content based recommendation system for movies
 ## Movis is live - VISIT NOW:
 movix.cc
 
+## Description
+
 ## Mockup
 <p align="center"><img width=90% src="https://github.com/SYM1000/movix/blob/main/MovixHomeMock.jpg"></p>
